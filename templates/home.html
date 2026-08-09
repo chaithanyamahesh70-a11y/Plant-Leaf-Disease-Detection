@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+
+<div class="container mt-5">
+
+    <div class="row align-items-center">
+
+        <div class="col-lg-6">
+
+            <h1 class="display-4 fw-bold text-success">
+                🌿 AI Plant Disease Detection System
+            </h1>
+
+            <p class="lead mt-4">
+
+                Detect plant diseases instantly using Artificial Intelligence and Deep Learning.
+
+                Upload a leaf image to identify diseases, view confidence score,
+
+                receive treatment suggestions, fertilizer recommendations,
+
+                and prevention tips.
+
+            </p>
+
+            <a href="/detect" class="btn btn-success btn-lg px-5 mt-3">
+
+                🔍 Detect Disease
+
+            </a>
+
+        </div>
+
+        <div class="col-lg-6 text-center">
+
+            <img src="{{ url_for('static', filename='images/hero.png') }}"
+                 class="img-fluid rounded shadow-lg"
+                 style="max-height:430px;"
+                 alt="Plant Disease Detection">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Supported Crops -->
+
+<div class="container mt-5">
+
+    <h2 class="text-center text-success fw-bold mb-5">
+
+        🌱 Supported Crops
+
+    </h2>
+
+    <div class="row">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/apple.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Apple</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/blueberry.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Blueberry</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/cherry.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Cherry</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/corn.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Corn</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/guava.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Guava</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/mango.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Mango</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/orange.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Orange</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/papaya.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Papaya</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/potato.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Potato</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card shadow h-100">
+                <img src="{{ url_for('static', filename='images/tomato.png') }}"
+                     class="card-img-top"
+                     style="height:220px; object-fit:contain; padding:15px;">
+                <div class="card-body text-center">
+                    <h5>Tomato</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Features -->
+
+<div class="container mt-5 mb-5">
+
+    <h2 class="text-center text-success fw-bold mb-5">
+
+        ⭐ Features
+
+    </h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 h-100">
+
+                <h1>🤖</h1>
+
+                <h5>AI Detection</h5>
+
+                <p>Predict plant diseases using Deep Learning.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 h-100">
+
+                <h1>📊</h1>
+
+                <h5>Confidence Score</h5>
+
+                <p>Displays prediction confidence for every uploaded image.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 h-100">
+
+                <h1>💊</h1>
+
+                <h5>Treatment</h5>
+
+                <p>Suggests disease-specific treatment recommendations.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 h-100">
+
+                <h1>🌱</h1>
+
+                <h5>Fertilizer</h5>
+
+                <p>Provides fertilizer recommendations and prevention tips.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

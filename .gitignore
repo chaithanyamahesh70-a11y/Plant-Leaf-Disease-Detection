@@ -1,0 +1,18 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Flask generated files
+instance/
+
+# Uploaded/generated files
+static/uploads/
+
+# Environment/secrets
+.env

@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-10">
+
+            <div class="card shadow-lg border-0 p-5">
+
+                <h2 class="text-center text-success fw-bold mb-4">
+                    🌿 Disease Detection Result
+                </h2>
+
+                <!-- Uploaded Image -->
+
+                <div class="text-center mb-4">
+
+                    <img src="{{ url_for('static', filename='uploads/' + image) }}"
+                         class="img-fluid rounded shadow"
+                         style="max-height:350px; border-radius:15px;">
+
+                </div>
+
+                <!-- Disease & Confidence -->
+
+                <div class="row text-center mb-4">
+
+                    <div class="col-md-6">
+
+                        <div class="alert alert-danger shadow">
+
+                            <h5>Disease Detected</h5>
+
+                            <h3 class="fw-bold">{{ disease }}</h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="alert alert-primary shadow">
+
+                            <h5>Confidence Score</h5>
+
+                            <h3 class="fw-bold">{{ confidence }}</h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Treatment -->
+
+                <h3 class="text-success mb-3">
+                    💊 Recommended Treatment
+                </h3>
+
+                <div class="alert alert-light border shadow-sm">
+
+                    {{ treatment }}
+
+                </div>
+
+                <!-- Fertilizer -->
+
+                <h3 class="text-success mt-4 mb-3">
+                    🌱 Fertilizer Recommendation
+                </h3>
+
+                <div class="alert alert-light border shadow-sm">
+
+                    {{ fertilizer }}
+
+                </div>
+
+                <!-- Prevention -->
+
+                <h3 class="text-success mt-4 mb-3">
+                    🛡 Prevention Tips
+                </h3>
+
+                <div class="alert alert-light border shadow-sm">
+
+                    {{ prevention }}
+
+                </div>
+
+                <hr class="my-5">
+
+                <!-- Useful Resources -->
+
+                <h3 class="text-center text-success mb-4">
+
+                    🌾 Useful Resources
+
+                </h3>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+
+                        <a href="https://www.iffco.in"
+                           target="_blank"
+                           class="btn btn-warning btn-lg w-100">
+
+                            🛒 Buy Fertilizers
+
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <a href="https://plantix.net/en/"
+                           target="_blank"
+                           class="btn btn-success btn-lg w-100">
+
+                            🌱 Plantix
+
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <a href="https://www.agrifarming.in/"
+                           target="_blank"
+                           class="btn btn-primary btn-lg w-100">
+
+                            📚 Disease Guide
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Buttons -->
+
+                <div class="text-center">
+
+                    <a href="/detect"
+                       class="btn btn-success btn-lg px-4 me-3">
+
+                        🔍 Detect Another Leaf
+
+                    </a>
+
+                    <a href="/"
+                       class="btn btn-outline-success btn-lg px-4">
+
+                        🏠 Home
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

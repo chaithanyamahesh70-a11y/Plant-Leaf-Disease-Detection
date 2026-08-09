@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="card shadow-lg border-0 p-5">
+
+                <h2 class="text-center text-success mb-3">
+                    🌿 AI Plant Disease Detection
+                </h2>
+
+                <p class="text-center text-muted mb-4">
+                    Upload a clear leaf image to detect the disease using our Deep Learning model.
+                </p>
+
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+
+                    <div class="mb-4">
+
+                        <label class="form-label fw-bold">
+                            📷 Choose Leaf Image
+                        </label>
+
+                        <input
+                            type="file"
+                            class="form-control form-control-lg"
+                            name="image"
+                            accept="image/*"
+                            required>
+
+                    </div>
+
+                    <div class="alert alert-success">
+
+                        <strong>Supported Crops</strong><br>
+
+                        🍎 Apple &nbsp;
+                        🫐 Blueberry &nbsp;
+                        🍒 Cherry &nbsp;
+                        🌽 Corn &nbsp;
+                        🍇 Grape &nbsp;
+                        🍊 Orange &nbsp;
+                        🍑 Peach &nbsp;
+                        🫑 Bell Pepper &nbsp;
+                        🥔 Potato &nbsp;
+                        🍓 Strawberry &nbsp;
+                        🍅 Tomato
+
+                    </div>
+
+                    <div class="d-grid">
+
+                        <button type="submit" class="btn btn-success btn-lg">
+
+                            🔍 Detect Disease
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
